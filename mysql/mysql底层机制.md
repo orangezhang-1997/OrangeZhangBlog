@@ -1,5 +1,4 @@
 <center><h3>mysql底层机制</center>>
-
 MySQL的分层可以分为**Service层**和**引擎层**。下图就是MySQL8之前的执行流程。![MySQL底层机制.png](https://i.loli.net/2019/12/16/G7Cn5Lk4SaHhTPB.png)
 
 #### 执行流程
@@ -57,3 +56,9 @@ select * form table; //类似于这种的就会直接报错
 这里才是数据存储的地方，也是SQL真正的去执行的地方。常见的存储引擎基本就是InnoDB和MyIsam这两种存储引擎。在MySQL5.7之后，我们创建表默认的引擎就是InnoDB，因为InnoDB相对于MyISAM来说，它更支持**事务**、**行级锁**、**B+树存储**、**外键**、**聚集索引**
 
 等操作。
+
+####  参考资料
+
+极客时间——MySQL45讲中01 | 基础架构：一条SQL查询语句是如何执行的？
+
+掘金小册——MySQL是怎样运行的：从根儿上理解MySQL
